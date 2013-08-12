@@ -3,6 +3,18 @@
 layout: default
 
 style: |
+    html {
+      background: url(/pictures/bg.png)
+    }
+
+    body.full {
+      -webkit-box-shadow: 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    #Cover img {
+      width: 100%
+    }
 
     #Cover h2 {
         margin:65px 0 0;
@@ -20,9 +32,23 @@ style: |
         #Cover p a {
             color:#FFF;
             }
-    #Picture h2 {
+
+    #Picture1 p, #Picture p,
+    #Picture1 h2, #Picture h2 {
         color:#FFF;
         }
+
+    #Picture img {
+      left: auto;
+      right:0;
+      top: auto;
+      bottom: 0;
+      height:70%
+    }
+
+    #Picture1 img {
+      width: 100%
+    }
     #SeeMore h2 {
         font-size:100px
         }
@@ -32,26 +58,46 @@ style: |
         }
 ---
 
-# Shower Presentation Engine {#Cover}
+# Архитектура без зависимостей {#Cover}
 
-*Brought you by [Vadim Makeev](http://pepelsbey.net/)*
+*[Андрей Кулаков](http://pepelsbey.net/)*
 
 ![](pictures/cover.jpg)
 
+## О чём?
 
-## Shower Key Features
+* ООП
+* Зависимость vs Связность
+* Инверсия управления (IoC) 
 
-1. Built on HTML, CSS and vanilla JavaScript
-2. All modern browsers are supported
-3. Slide themes are separated from engine
-4. Fully keyboard accessible
-5. Printable to PDF
+## Зависимость (Dependency) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Связанность (Coupling) 
+{:.cover #Picture}
 
-{:.note}
-Shower ['ʃəuə] noun. A person or thing that shows.
+Характеристика взаимосвязи модуля с другими модулями
 
+![](pictures/zav.jpg)
 
-## Plain Text on Your Slides
+## Пример
+
+{% uvhighlight %}
+  class User
+  end
+{% end %}
+
+## Связность, Сцепление (Cohesion)
+{:.cover #Picture1}
+
+Характеристика взаимосвязи элементов модуля между собой
+
+![](pictures/cohesion.jpg)
+
+## Сохранение состояния пользователя в веб-приложении
+
+* Язык пользователя
+* Данные аутентификации
+* ...
+
+## Plain Texot on Your Slides
 
 Lorem ipsum dolor sit amet, consectetur [adipisicing](#all-kind-of-lists) elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, *quis nostrud* exercitation ullamco laboris **nisi ut aliquip** ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in `<culpa>` qui officia deserunt mollit anim id est laborum.
 
@@ -83,11 +129,6 @@ Lorem ipsum dolor sit amet, consectetur [adipisicing](#all-kind-of-lists) elit, 
         <meta charset="<mark class="important">UTF-8</mark>">
         <link rel="stylesheet" href="screen.css">
     <mark></head></mark>
-
-## Pictures
-{:.cover #Picture}
-
-![](pictures/picture.jpg)
 
 ## You can even shout this way
 {:.shout}

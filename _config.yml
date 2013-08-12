@@ -1,21 +1,22 @@
+plugins: ./_plugins
 auto: true
 safe: true
 server: true
 markdown: kramdown
 pygments: true
 permalink: /:title.html
-exclude: [shower,themes]
+#exclude: [shower,themes]
 
 default_theme: ribbon
 default_lang: en
 default_body_class: list
 
 author:
-    name: Vadim Makeev
-    url:  http://pepelsbey.net/
+    name: Andrey Kulakov
+    url:  http://8xx8.ru
     company:
-        name: Opera Software
-        url:  http://opera.com
+        name: Undev
+        url:  http://undev.ru/
 
 fork_url: https://github.com/shower/shower
 progress: true
